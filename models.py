@@ -13,12 +13,12 @@ def build_tree(X_train, y_train):
 
     return clf_tree
 
-# def build_logistic(X_train, y_train):
-#     clf_logistic = LogisticRegression(max_iter=100)
-#     clf_logistic = clf_logistic.fit(X_train, y_train)
+def build_logistic(X_train, y_train):
+    clf_logistic = LogisticRegression(max_iter=100)
+    clf_logistic = clf_logistic.fit(X_train, y_train)
     
-#     # Save model
-#     with open(LOGISTIC_FILE, 'wb') as file:
-#         pickle.dump(clf_logistic, file)
+    # Save model
+    with open(LOGISTIC_FILE, 'wb') as file:
+        pickle.dump(clf_logistic, file)
 
-#     return clf_logistic
+    return clf_logistic

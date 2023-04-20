@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
+
 def get_column_names():
     # Get the column names from the UCI website
     column_names = ["Elevation",
