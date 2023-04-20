@@ -1,7 +1,7 @@
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 import pickle
-from constants import TREE_FILE, LOGISTIC_FILE
+from config_files.constants import TREE_FILE, LOGISTIC_FILE
 
 def build_tree(X_train, y_train):
     clf_tree = DecisionTreeClassifier()

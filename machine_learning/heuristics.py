@@ -1,6 +1,6 @@
 import pandas as pd 
 import numpy as np
-from constants import HEURISTIC_FILE
+from config_files.constants import HEURISTIC_FILE
 import os 
 
 class Heuristic:

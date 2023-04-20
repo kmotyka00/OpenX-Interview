@@ -1,6 +1,9 @@
+import sys
+sys.path.append(".")
+
 from flask import Flask, request, jsonify
-import data
-from app_utils import load_and_preprocess_data, load_or_create_models
+import data_preprocessing.data as data
+from rest_api.app_utils import load_and_preprocess_data, load_or_create_models
 import numpy as np
 
 # Create app

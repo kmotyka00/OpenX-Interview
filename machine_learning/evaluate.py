@@ -1,10 +1,13 @@
+import sys
+sys.path.append(".")
+
 from sklearn import metrics
-from app_utils import load_and_preprocess_data, load_or_create_models
+from rest_api.app_utils import load_and_preprocess_data, load_or_create_models
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
-from constants import NN_HISTORY_FILE
+from config_files.constants import NN_HISTORY_FILE
 
 def accuracy(y_true, y_pred):
     print("Accuracy:", metrics.accuracy_score(y_true, y_pred))

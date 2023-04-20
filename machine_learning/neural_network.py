@@ -2,7 +2,7 @@ from sklearn.model_selection import GridSearchCV
 from tensorflow.keras.models import Sequential
 from tensorflow.keras import layers
 from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
-from constants import NN_FILE, GRID_SEARCH_FILE, NN_HISTORY_FILE
+from config_files.constants import NN_FILE, GRID_SEARCH_FILE, NN_HISTORY_FILE
 import joblib
 
 def create_model(input_shape=(54,), num_hidden_layers=1, num_hidden_units=32, 

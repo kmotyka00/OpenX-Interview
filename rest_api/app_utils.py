@@ -1,12 +1,12 @@
 import pickle 
-from models import build_logistic, build_tree
+from machine_learning.sklearn_models import build_logistic, build_tree
 import tensorflow as tf
-from constants import TREE_FILE, LOGISTIC_FILE, NN_FILE, DATASET_URL
-from models import build_logistic, build_tree
-from neural_network import build_nn
+from config_files.constants import TREE_FILE, LOGISTIC_FILE, NN_FILE, DATASET_URL
+from machine_learning.sklearn_models import build_logistic, build_tree
+from machine_learning.neural_network import build_nn
 import pickle
-import heuristics
-import data
+import machine_learning.heuristics as heuristics
+import data_preprocessing.data as data
 
 
 def load_and_preprocess_data():
