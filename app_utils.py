@@ -1,8 +1,7 @@
 import pickle 
 from models import build_logistic, build_tree
 import tensorflow as tf
-import pandas as pd
-from constants import HEURISTIC_FILE, TREE_FILE, LOGISTIC_FILE, NN_FILE, DATASET_URL
+from constants import TREE_FILE, LOGISTIC_FILE, NN_FILE, DATASET_URL
 from models import build_logistic, build_tree
 from neural_network import build_nn
 import pickle

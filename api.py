@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import data
 from app_utils import load_and_preprocess_data, load_or_create_models
-import numpy as np 
+import numpy as np
 
 # Create app
 app = Flask(__name__)

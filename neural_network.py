@@ -1,10 +1,8 @@
 from sklearn.model_selection import GridSearchCV
-import tensorflow as tf
-from tensorflow import keras
 from tensorflow.keras.models import Sequential
 from tensorflow.keras import layers
 from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
-from constants import NN_FILE, GRID_SEARCH_FILE
+from constants import NN_FILE, GRID_SEARCH_FILE, NN_HISTORY_FILE
 import joblib
 
 def create_model(input_shape=(54,), num_hidden_layers=1, num_hidden_units=32, 
@@ -50,8 +48,13 @@ def build_nn(X_train, y_train):
 
     # Train the best model
     best_model = grid_search.best_estimator_
-    best_model.fit(X_train, y_train, epochs=20, batch_size=32, verbose=1) #, callbacks=[EarlyStopping(patience=3)]
 
+    # Plot the learning curve
+    history = best_model.fit(X_train, y_train, epochs=20, batch_size=32, verbose=1) #, callbacks=[EarlyStopping(patience=3)]
+
+    # Save the history
+    joblib.dump(history, NN_HISTORY_FILE)
+    
     # Save model
     best_model.model.save(NN_FILE)
 
