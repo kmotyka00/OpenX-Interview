@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 5000
 
 # Run command
-CMD ["python", "api.py"]
+CMD ["python", "rest_api/api.py"]
